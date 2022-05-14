@@ -1,74 +1,92 @@
 print("\033[1;31m")
 print("\033[0;30;49m\n")
+
 import time
 import sys
 import math
 import cmath
+
+# for some reason I made 13 functions that all do the same thing
+
 def fastLetter(words):
   for char in words:
     time.sleep(0.00000000001)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def quickLettert5(words):
   for char in words:
     time.sleep(0.0005)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def quickLetter1(words):
   for char in words:
     time.sleep(0.001)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def quickLetter1t5(words):
   for char in words:
     time.sleep(0.0015)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def quickLetter2(words):
   for char in words:
     time.sleep(0.002)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def quickLetter2t5(words):
   for char in words:
     time.sleep(0.0025)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def quickLetter3(words):
   for char in words:
     time.sleep(0.003)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def quickLetter3t5(words):
   for char in words:
     time.sleep(0.0035)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def quickLetter4(words):
   for char in words:
     time.sleep(0.004)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def quickLetter6(words):
   for char in words:
     time.sleep(0.006)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def quickLetter5(words):
   for char in words:
     time.sleep(0.005)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def medLetter(words):
   for char in words:
     time.sleep(0.05)
     sys.stdout.write(char)
     sys.stdout.flush()
+    
 def midLetter(words):
   for char in words:
     time.sleep(0.025)
     sys.stdout.write(char)
     sys.stdout.flush()
+
+# ascii art shown on startup
 def calScreen():
   print("\033[0;37;1;33m\n")
   quickLettert5("                                        lllllll                                          lllllll                             tttt                                                 ")
@@ -103,6 +121,7 @@ def calScreen():
   print("")
   quickLetter6("    cccccccccccccccc   aaaaaaaaaa  aaaa llllllll     cccccccccccccccc     uuuuuuuu  uuuu llllllll   aaaaaaaaaa  aaaa          ttttttttttt      ooooooooooo     rrrrrrr            ")
   print("\033[0;30;49m\n")
+
 z=0
 y=0
 x=0
@@ -112,7 +131,9 @@ n3=0
 on=1
 stop=0
 calScreen()
-def letterCal(o):
+
+def letterCal(o):    # yea I have no clue how this works
+  
   if not o==0:
     n1=o
     n1=float(n1)
@@ -130,9 +151,11 @@ def letterCal(o):
         n3=n3*n2
         n1=n2
         stop = 1
+        
     if "=" in f:
       n3=o
       stop=1
+      
     if stop == 0:
       medLetter("Please choose a number or letters")
       print("\033[0;36m\n")
@@ -178,6 +201,7 @@ def letterCal(o):
         n3=n1**n2
       if f == "%":
         n3=n1*n2/100
+        
       medLetter("Here's your answer:")
       print("")
       sys.stdout.write("\033[1;32m\n")
@@ -185,9 +209,11 @@ def letterCal(o):
       fastLetter(n3)
       n3=float(n3)
       print("\033[0;30;49m\n")
+      
   if o==0:
     if letter=="z":
       n1="z"
+      
     medLetter("Please choose a number")
     print("\033[0;36m\n")
     n2=input("")
@@ -199,6 +225,7 @@ def letterCal(o):
     print("")
     print(n3)
     print("\033[0;30;49m\n")
+    
 while on == 1:
   medLetter("Please choose a number or letter")
   print("\033[0;36m\n")
@@ -221,6 +248,7 @@ while on == 1:
         n3=n3*n2
         n1=n2
         stop=1
+        
     if stop==0:
       medLetter("Please choose a number or letters")
       print("\033[0;36m\n")
@@ -266,6 +294,7 @@ while on == 1:
         n3=n1**n2
       if f == "%":
         n3=n1*n2/100
+        
       medLetter("Here's your answer:")
       print("")
       sys.stdout.write("\033[1;32m\n")
@@ -273,6 +302,7 @@ while on == 1:
       fastLetter(n3)
       n3=float(n3)
       print("\033[0;30;49m\n")
+      
   if n1=="x":
     if not x==0:
       n1=x
@@ -290,10 +320,13 @@ while on == 1:
           n2=n1-1
           n3=n3*n2
           n1=n2
+          
         stop = 1
+        
       if "=" in f:
         n3=x
         stop=1
+        
       if stop == 0:
         medLetter("Please choose a number or letters")
         print("\033[0;36m\n")
@@ -339,6 +372,7 @@ while on == 1:
           n3=n1**n2
         if f == "%":
           n3=n1*n2/100
+          
         medLetter("Here's your answer:")
         print("")
         sys.stdout.write("\033[1;32m\n")
@@ -346,6 +380,7 @@ while on == 1:
         fastLetter(n3)
         n3=float(n3)
         print("\033[0;30;49m\n")
+        
     if x==0:
       medLetter("Please choose a number")
       print("\033[0;36m\n")
@@ -358,6 +393,7 @@ while on == 1:
       print("")
       print(n3)
       print("\033[0;30;49m\n")
+      
   if n1=="y":
     if not y==0:
       n1=y
@@ -376,6 +412,7 @@ while on == 1:
           n3=n3*n2
           n1=n2
           stop = 1
+          
       if "=" in f:
         n3=y
         stop=1
